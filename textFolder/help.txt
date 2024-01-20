@@ -1,0 +1,29 @@
+ntsre表記について
+
+NTSRとはName　Type SendMessage Role ephemeralの略
+ボタンを作るときに用いる特殊な表記方法。
+各要素をエクスクラメーションマーク(!のこと。半角が条件)で区切る必要がある
+
+Name!Type!SendMessage!Role!Ephemeral
+
+なのでNameやSendMessageに半角の!を用いると区切りと判別される可能性がある。
+!を含ませたい場合は{}を用いること
+Name!Type!{SendMessage!}!Role
+上記のように使いたい要素を囲みその中で!を使うと正しく反映される。
+
+ephemeralとは一時メッセージでボタンを押した本人のみに表示されるメッセージのこと
+文字の指定は　true または false の2択。
+これら以外の文字を入力しても反映はされない。
+
+
+　↓Type↓
+Primary:青
+Success:緑
+Danger:赤
+Secondary:灰
+
+ntsreを利用するにあたってtypeの指定は
+Primary,Syccess,Danger,Secondaryの4つのいずれかである必要がある。
+入力するにあたって頭文字は大文字にすること。
+LinkもTypeの一つだがこのBOTでは機能はしない
+
